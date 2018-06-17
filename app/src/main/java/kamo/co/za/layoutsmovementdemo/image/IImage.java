@@ -24,7 +24,6 @@ public interface IImage {
         void copyImageToTheRightDirectory(String mSelectedImagePath, File file);
         Bitmap getCompressedBitmap(Bitmap bitmap);
         void saveBitmapAsImage(Bitmap bitmap);
-
     }
 
 }

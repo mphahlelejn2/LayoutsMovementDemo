@@ -55,6 +55,7 @@ public class ImageWorker {
         return new File(getImageDirectory(context,external), fileName);
     }
 
+
     private static File getAlbumStorageDir() {
         File file = new File(Environment.getExternalStorageDirectory(), directoryName);
         if (!file.mkdirs()) {

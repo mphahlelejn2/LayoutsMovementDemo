@@ -1,4 +1,7 @@
 package kamo.co.za.layoutsmovementdemo.workers;
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import kamo.co.za.layoutsmovementdemo.main.IMain;
@@ -15,8 +18,7 @@ public class ImageLayoutWorker {
 
         if(imageUseCase !=null&&view!=null&&imageName!=null&&!imageName.isEmpty()) {
            child = new MovableLayout(view);
-
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(900, 715);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(Resources.getSystem().getDisplayMetrics().heightPixels-(Resources.getSystem().getDisplayMetrics().heightPixels/4),Resources.getSystem().getDisplayMetrics().heightPixels);
             child.setLayoutParams(params);
             child.setOrientation(LinearLayout.VERTICAL);
 

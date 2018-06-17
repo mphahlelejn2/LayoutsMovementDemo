@@ -12,108 +12,89 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
     </android.support.design.widget.AppBarLayout>
-
-
-
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/save_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_done_black_24dp"
-        app:backgroundTint="@android:color/holo_blue_dark"
-        app:borderWidth="0dp"
-        android:background="@android:color/transparent"
-        android.support.design:fabSize="normal"
-        android:adjustViewBounds="true"
-        />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_invisible1"
-        android:layout_width="@dimen/fab_margin"
-        android:layout_height="@dimen/fab_margin"
-        android:layout_margin="@dimen/fab_margin"
-        android:visibility="invisible"
-        android:layout_gravity="top|end"
-        app:layout_anchor="@+id/save_button"
-        app:layout_anchorGravity="top"
-        />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/BuploadImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_gravity="top|end"
-        app:layout_anchor="@+id/fab_invisible1"
-        app:layout_anchorGravity="top"
-        android:src="@drawable/ic_attach_file_black_24dp"
-        app:backgroundTint="@android:color/holo_blue_dark"
-        app:borderWidth="0dp"
-        android:background="@android:color/transparent"
-        android.support.design:fabSize="normal"
-        android:adjustViewBounds="true"
-
-        />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_invisible2"
-        android:layout_width="@dimen/fab_margin"
-        android:layout_height="@dimen/fab_margin"
-        android:layout_margin="@dimen/fab_margin"
-        android:visibility="invisible"
-        android:layout_gravity="top|end"
-        app:layout_anchor="@+id/BuploadImage"
-        app:layout_anchorGravity="top"
-        />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_gravity="top|end"
-        app:layout_anchor="@+id/fab_invisible2"
-        app:layout_anchorGravity="top"
-        android:src="@drawable/ic_add_a_photo_black_24dp"
-        app:backgroundTint="@android:color/holo_blue_dark"
-        app:borderWidth="0dp"
-        android:background="@android:color/transparent"
-        android.support.design:fabSize="normal"
-        android:adjustViewBounds="true"
-        />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_invisible3"
-        android:layout_width="@dimen/fab_margin"
-        android:layout_height="@dimen/fab_margin"
-        android:layout_margin="@dimen/fab_margin"
-        android:visibility="invisible"
-        android:layout_gravity="top|end"
-        app:layout_anchor="@+id/add_image"
-        app:layout_anchorGravity="top"
-        />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/delete_last_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_gravity="top|end"
-        app:layout_anchor="@+id/fab_invisible3"
-        app:layout_anchorGravity="top"
-        android:src="@drawable/ic_delete_forever_black_24dp"
-        app:backgroundTint="@android:color/holo_blue_dark"
-        app:borderWidth="0dp"
-        android:background="@android:color/transparent"
-        android.support.design:fabSize="normal"
-        android:adjustViewBounds="true"
-        />
-
-
     <include
         android:id="@+id/include2"
         layout="@layout/layout_content"
         app:layout_anchor="@+id/BBack"
         app:layout_anchorGravity="left|bottom" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:src="@drawable/ic_delete_forever_black_24dp"
+            app:backgroundTint="@android:color/transparent"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/fab_upload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/_fab_capture"
+            app:layout_constraintEnd_toEndOf="@+id/fab_delete"
+            app:layout_constraintTop_toBottomOf="@+id/fab_delete"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            app:srcCompat="@android:color/transparent"
+            android:src="@drawable/ic_attach_file_black_24dp"
+            app:backgroundTint="@android:color/transparent"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/_fab_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/fab_save"
+            app:layout_constraintEnd_toEndOf="@+id/fab_save"
+            app:layout_constraintTop_toBottomOf="@+id/fab_upload"
+            android:src="@drawable/ic_add_a_photo_black_24dp"
+            app:backgroundTint="@android:color/transparent"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_done_black_24dp"
+            app:backgroundTint="@android:color/transparent"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/_fab_capture" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
 </android.support.design.widget.CoordinatorLayout>

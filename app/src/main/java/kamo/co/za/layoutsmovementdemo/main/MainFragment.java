@@ -23,13 +23,13 @@ public class MainFragment extends ImageFragment implements IMain.View {
     public static final int RESULT_LOAD_IMAGE=2;
     public static final String TAG= "ImageLayoutFragment";
 
-    @BindView(R.id.delete_last_image)
+    @BindView(R.id.fab_delete)
     public FloatingActionButton deleteLastImage;
-    @BindView(R.id.add_image)
+    @BindView(R.id._fab_capture)
     public FloatingActionButton addImage;
-    @BindView(R.id.BuploadImage)
+    @BindView(R.id.fab_upload)
     public FloatingActionButton uploadImage;
-    @BindView(R.id.save_button)
+    @BindView(R.id.fab_save)
     public FloatingActionButton save;
     @BindView(R.id.stopeScrollView)
     public LockableScrollView stopeScrollView;

@@ -10,16 +10,7 @@ import kamo.co.za.layoutsmovementdemo.main.MainModule;
 @Module(includes = AndroidInjectionModule.class)
 public abstract class Builder {
 
-
     @PerActivity
     @ContributesAndroidInjector(modules = MainModule.class)
     abstract MainFragment bindColorDetailsFragment();
-
-    /*@PerActivity
-    @ContributesAndroidInjector(modules = ColorModule.class)
-    abstract ListOfColorsFragment bindListOfColorsFragment();
-
-    @PerActivity
-    @ContributesAndroidInjector(modules = UserModule.class)
-    abstract ListOfUsersFragment bindListOfUsersFragment();*/
 }

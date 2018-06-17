@@ -111,8 +111,6 @@ public abstract class ImageFragment extends Fragment implements IImage.View{
         file = ImageWorker.createImage(getActivity(), imageName,true);
         if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
             takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
-            // this.startActivityForResult(takePictureIntent,REQUEST_IMAGE_CAPTURE);
-            //  getActivity().startActivityForResult(takePictureIntent,REQUEST_IMAGE_CAPTURE);
             startActivityForResult(takePictureIntent,REQUEST_IMAGE_CAPTURE);
         }
     }

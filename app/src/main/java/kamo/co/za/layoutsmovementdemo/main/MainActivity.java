@@ -12,15 +12,12 @@ public class MainActivity extends AppCompatActivity {
 
     private MainFragment imageLayoutFragment;
     private FragmentManager fragmentManager;
-    private static final String LAYOUT ="LAYOUT";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity);
         fragmentManager=getSupportFragmentManager();
-
-        //imageLayoutFragment= (MainFragment) fragmentManager.findFragmentById(Integer.parseInt(LAYOUT));
 
         if(imageLayoutFragment ==null)
             imageLayoutFragment = MainFragment.newInstance();
